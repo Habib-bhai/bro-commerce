@@ -7,9 +7,8 @@ export default function Contact() {
         <Image
           src="/black.jpg"
           alt="Agriculture background"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
+          fill
+          style={{ objectFit: "cover" }}
           quality={100}
         />
         <div className="absolute inset-0 bg-black opacity-30" />

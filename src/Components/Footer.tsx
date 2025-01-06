@@ -1,16 +1,21 @@
 "use client";
+import Image from 'next/image'
 export default function Footer() {
   return (
     <footer className="font-sans tracking-wide bg-black px-8 py-12">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10 justify-center">
         {/* Logo and Social Links */}
         <div>
           <a href="javascript:void(0)">
-            <img
-              src="/images/logo.png"
-              alt="logo"
-              className="w-44 h-44"
-            />
+          <Image
+  src="/images/logo.png"
+  alt="Logo"
+  width={200} // specify width
+  height={200} // specify height
+  
+  priority
+  
+/>
           </a>
           <ul className="mt-10 flex space-x-5">
             <li className="relative group">

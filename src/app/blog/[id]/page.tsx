@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import posts from "../../../../post-details/data.json";
 import Image from "next/image";
 import { Clock4, User, CalendarDays } from "lucide-react";
@@ -7,39 +6,26 @@ import Comments from "@/Components/Comments";
 import BlogAnimation from "@/Components/animations/BlogAnimation";
 
 type Props = {
-  params: {
-    id: string;
-  };
+  params: Promise< {
+    id: string; 
+  }>;
 };
 
-// Metadata generation for dynamic pages
-export const generateMetadata = async ({
-  params,
-}: Props): Promise<Metadata> => {
-  if (!params || !params.id) {
-    return {
-      title: "CodeEthics | Blog",
-    };
-  }
 
-  // Simulating delay if needed
-  await new Promise((resolve) => setTimeout(resolve, 100));
 
-  return {
-    title: `AI Sphere | Blog ${params.id}`,
-  };
-};
 
-export default function AllBlog({
-  params: { id },
-}: {
-  params: { id: string };
-}) {
+export default async function AllBlog({ params }: Props) {
+
+  const resolvedParams = await params; // Await the params if it's a Promise
+  const { id } = resolvedParams;
+  
+ 
   // Fetch the post data based on the dynamic route id
-  const post = posts.find((p) => p.id === id);
+  const post = posts.find((p: any) => p.id === id);
 
   // Show a loading skeleton if the post is not found
   if (!post) return <Skeleton />;
+  // this code is debugged by m.Anees
 
   return (
     <div className="pt-20 w-full">

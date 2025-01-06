@@ -15,4 +15,4 @@ export default function BlogAnimation(
       {children}
     </motion.div>
   );
-}
+} 

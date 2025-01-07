@@ -8,8 +8,8 @@ import { motion } from "framer-motion";
 
 export default function LatestArticles() {
   return (
-    <section className="pt-32 static bg-gray-200">
-      <div className="w-screen mx-auto lg:px-4 px-7">
+    <section className="pt-32  bg-gray-200">
+      <div className="w-screen  lg:px-4 px-7">
         <motion.h1
           initial={{ opacity: 0.3, x: -20 }}
           whileInView={{ opacity: 1, x: 1 }}
@@ -19,7 +19,7 @@ export default function LatestArticles() {
         >
           Latest Articles
         </motion.h1>
-        <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 cursor-pointer">
+        <div className="w-full grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 cursor-pointer">
           {
             posts.slice(4, 10).map((post, index) => (
               <motion.div

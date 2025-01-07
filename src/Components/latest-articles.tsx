@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 export default function LatestArticles() {
   return (
     <section className="pt-32 static bg-gray-200">
-      <div className="max-w-screen-xl mx-auto lg:px-4 px-7">
+      <div className="w-screen mx-auto lg:px-4 px-7">
         <motion.h1
           initial={{ opacity: 0.3, x: -20 }}
           whileInView={{ opacity: 1, x: 1 }}
@@ -29,7 +29,7 @@ export default function LatestArticles() {
                 transition={{ duration: 1, delay: 0.2 }}
                 exit={{ opacity: 1, y: -20 }}
               >
-                <Card className="hover:scale-105 duration-300 transition-transform pb-3 rounded-2xl shadow-lg my-4">
+                <Card className=" w-[300px] md:w-[400px] hover:scale-105 duration-300 transition-transform pb-3 rounded-2xl shadow-lg my-4">
                   <Image
                     src={post.src}
                     alt={post.tittle}

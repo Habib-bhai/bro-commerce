@@ -27,7 +27,8 @@ export default function PopularArticles() {
             exit={{ opacity: 0, x: -20 }}
             className="flex flex-col xl:max-w-xl"
           >
-            {posts.slice(0, 1).map((post, index) => (
+            {
+            posts.slice(0, 1).map((post, index) => (
               <Link href={`/blog/${post.id}`} key={index} className="">
                 <Image
                   src={post.src}

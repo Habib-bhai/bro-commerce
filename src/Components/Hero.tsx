@@ -21,7 +21,7 @@ export default function Hero() {
             priority
             className="object-cover object-center w-full h-full"
           />
-          <div className="absolute inset-0 bg-black opacity-30" />
+          {/* <div className="absolute inset-0 bg-black opacity-30" >  */}
         </div>
         
         <motion.div 

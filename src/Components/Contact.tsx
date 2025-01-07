@@ -3,12 +3,13 @@ import { ArrowRight } from "lucide-react";
 export default function Contact() {
   return (
     <section className="relative w-full h-[500px] mt-10">
-      <div className="absolute inset-0">
+      <div >
         <Image
           src="/black.jpg"
           alt="Agriculture background"
           fill
           style={{ objectFit: "cover" }}
+          className="absolute inset-0"
           quality={100}
         />
         <div className="absolute inset-0 bg-black opacity-30" />

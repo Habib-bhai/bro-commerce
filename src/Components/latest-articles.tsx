@@ -19,7 +19,7 @@ export default function LatestArticles() {
         >
           Latest Articles
         </motion.h1>
-        <div className="w-full grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 cursor-pointer">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3  gap-8 cursor-pointer">
           {
             posts.slice(4, 10).map((post, index) => (
               <motion.div

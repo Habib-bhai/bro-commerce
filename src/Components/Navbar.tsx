@@ -34,8 +34,8 @@ export default function Navbar({ bgColor, color }: NavbarPops) {
         scrolledin ? "bg-zinc-50 text-black" : `${bgColor} ${color}`
       }`}
     >
-      <nav className="max-w-screen-2xl mx-auto flex justify-between h-20 items-center md:px-12 px-4">
-        <div className="flex items-center justify-between  w-full md:w-auto">
+      <nav className="w-screen  mx-auto flex justify-between h-20 items-center md:px-12 px-4">
+        <div className="flex items-center justify-between  w-full ">
           <div className="flex items-center">
             <Image
               src="/images/logo.png"
